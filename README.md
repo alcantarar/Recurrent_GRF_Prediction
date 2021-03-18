@@ -6,7 +6,7 @@ This repository contains an example of how a Recurrent Neural Network (RNN) can 
 force (GRF) data from accelerometer data during running. This approach is implemented in the following manuscript:
 
 *Predicting continuous ground reaction forces from accelerometers during uphill and downhill running: A recurrent 
-neural network approach"* by Alcantara et al. (In Press)
+neural network solution"* by Alcantara et al. (In Press)
 
 ## Repository Files
 - `data/`: Contains example accelerometer data, GRF data, condition/demographic data, and RNN model file. 
