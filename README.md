@@ -1,4 +1,7 @@
 # Recurrent GRF Prediction
+
+![](README_image.png)
+
 This repository contains an example of how a Recurrent Neural Network (RNN) can be used to predict ground reaction
 force (GRF) data from accelerometer data during running. This approach is implemented in the following manuscript:
 
@@ -25,9 +28,9 @@ be padded at the beginning/end:
         |   padded  |    
 Frame # |-3 |-2 | -1| 0 | 1 | 2 | 3 | 4 |  
         |---|---|---|---|---|---|---|---|
-Window 1 \____________*________/
-Window 2     \________|___+________/
-Window 3         \____|___|___#_______/
+Window 0 \____________*________/
+Window 1     \________|___+________/
+Window 2         \____|___|___#_______/
 ...                   |   |   |
                       |   |   |
   GRF Signal:         *   +   #
