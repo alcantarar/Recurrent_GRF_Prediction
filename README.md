@@ -1,4 +1,5 @@
 # Predicting continuous ground reaction forces from accelerometers during uphill and downhill running: A recurrent neural network solution
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=alcantarar.Recurrent_GRF_Prediction)
 
 *Ryan Alcantara*
 
