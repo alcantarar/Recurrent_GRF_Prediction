@@ -4,11 +4,7 @@
 *Ryan Alcantara*
 
 This repository contains an example of how a Recurrent Neural Network (RNN) can be used to predict ground reaction
-force (GRF) data from accelerometer data during running. Please cite the associated publication if using code or data 
-from this repository:
-
-[Alcantara RS, Edwards WB, Millet GY, Grabowski AM 2021. Predicting continuous ground reaction forces from accelerometers
-during uphill and downhill running: A recurrent neural network solution. *bioRxiv.*](https://www.biorxiv.org/content/10.1101/2021.03.17.435901v1.article-metrics)
+force (GRF) data from accelerometer data during running.
 
 ## Repository Contents
 - `data/`: Contains example accelerometer data, GRF data, condition/demographic data, and RNN model file. 
@@ -47,10 +43,10 @@ information about the condition and runner,
 for a total of 13 features: (3 features from the AP accelerometer data, 3 features from the vertical accelerometer 
 data, and 7 discrete features).
 
-## RNN vs ANN
+## RNN vs MLP
 The benefit of using RNNs is that the input can be of variable lengths! Even though the network in this repository
 was trained on signals that were *n* seconds long, it will work on longer or shorter signals, as long as the number of 
-features and size of windows are the same. This is advantageous over artificial neural networks (ANNs) that are used to 
+features and size of windows are the same. This is advantageous over multilayer perceptrons (MLPs) that are used to 
 predict the whole time series at once. The input signal length must be consistent during training and inference, so 
 that's why it's common to normalize accelerometer and GRF data to 100% stance phase and process each stance phase separately. 
 This approach requires preliminary stance phase identification and doesn't allow for calculation of temporal variables 
