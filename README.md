@@ -1,8 +1,6 @@
 # Predicting continuous ground reaction forces from accelerometers during uphill and downhill running: A recurrent neural network solution
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=alcantarar.Recurrent_GRF_Prediction)
 
-*Ryan Alcantara*
-
 This repository contains an example of how a Recurrent Neural Network (RNN) can be used to predict ground reaction
 force (GRF) data from accelerometer data during running.
 
