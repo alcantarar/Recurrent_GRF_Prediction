@@ -2,7 +2,7 @@
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=alcantarar.Recurrent_GRF_Prediction)
 
 This repository contains an example of how a Recurrent Neural Network (RNN) can be used to predict ground reaction
-force (GRF) data from accelerometer data during running.
+force (GRF) data from accelerometer data during running. The model files and supporting data are archived via [Zenodo](https://zenodo.org/record/4995574).
 
 ## Repository Contents
 - `data/`: Contains example accelerometer data, GRF data, condition/demographic data, and RNN model file. 
