@@ -3,9 +3,9 @@
 
 The final models and data supporting [Predicting continuous ground reaction 
 forces from accelerometers during uphill and downhill running: A recurrent neural network 
-solution. *bioRxiv.*](https://www.biorxiv.org/content/10.1101/2021.03.17.435901) are archived 
+solution](https://www.biorxiv.org/content/10.1101/2021.03.17.435901) are archived 
 via Zenodo [here](https://zenodo.org/record/4995574). `Train_LSTM.ipynb` is the notebook that
-produces the archived models from the archived data.
+generates the model from the archived data.
 
 This repository also provides an example of how a Recurrent Neural Network (RNN) can be used to 
 predict ground reaction force (GRF) data from accelerometer data during running:
