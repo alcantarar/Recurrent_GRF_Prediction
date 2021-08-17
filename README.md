@@ -18,15 +18,6 @@ you utilize their GPU Runtime Type. You will need to adjust the path to `data/` 
 Google Colab.
 - `pre_processing.py`: Some functions used in `LSTM_Example.ipynb`.
 
-## RNN vs MLP
-The benefit of using RNNs is that the input can be of variable lengths! Even though the network in this repository
-was trained on signals that were *n* seconds long, it will work on longer or shorter signals, as long as the number of 
-features and size of windows are the same. This is advantageous over multilayer perceptrons (MLPs) that are used to 
-predict the whole time series at once. The input signal length must be consistent during training and inference, so 
-that's why it's common to normalize accelerometer and GRF data to 100% stance phase and process each stance phase 
-separately when using MLPs. This approach requires preliminary stance phase identification and doesn't allow for 
-calculation of temporal variables like contact time, swing time, step frequency, etc. 
-
 ## Questions?
 [Open an issue](https://github.com/alcantarar/Recurrent_GRF_Prediction/issues/new) if you have a question or if 
 something is broken. 
