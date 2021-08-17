@@ -7,12 +7,12 @@ solution](https://www.biorxiv.org/content/10.1101/2021.03.17.435901) are archive
 via Zenodo [here](https://zenodo.org/record/5213939). `Train_LSTM.ipynb` is the notebook that
 generates the model from the archived data.
 
-This repository also provides an example of how a Recurrent Neural Network (RNN) can be used to 
+This repository also provides an example of how a Long Short-Term Memory Network (LSTM) can be used to 
 predict ground reaction force (GRF) data from accelerometer data during running:
 
 ## Tutorial Contents
-- `data/`: Contains example accelerometer data, GRF data, condition/demographic data, and RNN model file. 
-- `LSTM_Example.ipynb`: Notebook example of how to prepare data and train an RNN to predict GRFs from accelerometer data.
+- `data/`: Contains example accelerometer data, GRF data, condition/demographic data, and LSTM model file. 
+- `LSTM_Example.ipynb`: Notebook example of how to prepare data and train an LSTM to predict GRFs from accelerometer data.
 If you're going to run this notebook using [Google Colab](https://colab.research.google.com/) (recommended), make sure 
 you utilize their GPU Runtime Type. You will need to adjust the path to `data/` depending on how files are uploaded in
 Google Colab.
