@@ -1,9 +1,9 @@
 # Predicting continuous ground reaction forces from accelerometers during uphill and downhill running: A recurrent neural network solution
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=alcantarar.Recurrent_GRF_Prediction)
 
-The final models and data supporting [Predicting continuous ground reaction 
+The final models and data supporting the published manuscript,[Predicting continuous ground reaction 
 forces from accelerometers during uphill and downhill running: A recurrent neural network 
-solution](https://www.biorxiv.org/content/10.1101/2021.03.17.435901) are archived 
+solution](https://peerj.com/articles/12752/), are archived 
 via Zenodo [here](https://zenodo.org/record/5213939). `Train_LSTM.ipynb` is the notebook that
 generates the model from the archived data.
 
