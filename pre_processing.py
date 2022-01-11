@@ -1,5 +1,47 @@
 import numpy as np
 from numpy.lib.stride_tricks import as_strided as ast
+from scipy.signal import butter, filtfilt
+
+def buttfilt(x, fs, fc, order, axis=1):
+    """
+    BUTTFILT applies a lowpass butterworth filter with a correction factor described in
+    Research Methods in Biomechanics (2ed) and explained further here:
+    https://github.com/alcantarar/dryft/issues/22#issuecomment-557771825
+    :param x: signal to filter
+    :param fs: sampling frequency (Hz)
+    :param fc: lowpass cutoff frequency (Hz). If tuple, will do bandpass (low, high).
+    :param order: final desired filter order. Must be even number.
+    :param axis: axis to filter along. Default is `axis=1`.
+    :return:
+    """
+    n_pass = 2  # two passes (one forward, one backward to be zero-lag)
+    if (order % 2) != 0:
+        raise ValueError('order must be even integer')
+    else:
+        order = order / 2
+        fn = fs / 2
+        # Correction factor per Research Methods in Biomechanics (2e) pg 288
+        c = (2 ** (1 / n_pass) - 1) ** (1 / (2 * order))
+        if type(fc) is tuple:
+            # bandpass filter:
+            wn_low = (np.tan(np.pi*fc[0]/fs))/c  # Apply correction to adjusted cutoff freq (lower boundary)
+            wn_up = (np.tan(np.pi*fc[1]/fs))/c  # Apply correction to adjusted cutoff freq (upper boundary)
+            fc_corrected_low = np.arctan(wn_low)*fs/np.pi  # Hz
+            fc_corrected_up = np.arctan(wn_up)*fs/np.pi  # Hz
+            b, a = butter(order, [fc_corrected_low/fn, fc_corrected_up/fn], btype='band')
+
+            x_filt = filtfilt(b, a, x, axis=axis)
+
+        else:
+            # lowpass filter:
+            wn = (np.tan(np.pi*fc/fs))/c  # Apply correction to adjusted cutoff freq
+            fc_corrected = np.arctan(wn)*fs/np.pi  # Hz
+            b, a = butter(order, fc_corrected/fn)
+
+            x_filt = filtfilt(b, a, x, axis=axis)
+
+        return x_filt
+
 
 def chunk_data(data, window_size, overlap_size=0, flatten_inside_window=True):
     """
