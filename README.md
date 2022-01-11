@@ -5,7 +5,8 @@ The final models and data supporting the published manuscript,[Predicting contin
 forces from accelerometers during uphill and downhill running: A recurrent neural network 
 solution](https://peerj.com/articles/12752/), are archived 
 via Zenodo [here](https://zenodo.org/record/5213939). `Train_LSTM.ipynb` is the notebook that
-generates the model from the archived data.
+generates the model from the archived data. `Test_LSTM.ipynb` is a notebook that shows you how to use
+the trained LSTM to predict GRFs from your own accelerometer data.
 
 This repository also provides an example of how a Long Short-Term Memory Network (LSTM) can be used to 
 predict ground reaction force (GRF) data from accelerometer data during running:
