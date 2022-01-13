@@ -13,12 +13,12 @@ The final models and data supporting the published manuscript are archived [here
 
 `Test_LSTM.ipynb` is a notebook that shows you how to use the trained LSTM to predict GRFs from your own accelerometer data.
 
-`Example_LSTM.ipynb` is a notebook that provides a tutorial of how a Long Short-Term Memory Network (LSTM) can be used to 
+`LSTM_Example.ipynb` is a notebook that provides a tutorial of how a Long Short-Term Memory Network (LSTM) can be used to 
 predict ground reaction force (GRF) data from accelerometer data during running.
 
 `pre_processing.py` contains helper functions used in `LSTM_Example.ipynb` and `Test_LSTM.ipynb`.
 
-`data/` Contains example accelerometer data, GRF data, condition/demographic data, and LSTM model file. Supports `Test_LSTM.ipynb` and `Example_LSTM.ipynb`. 
+`data/` Contains example accelerometer data, GRF data, condition/demographic data, and LSTM model file. Supports `Test_LSTM.ipynb` and `LSTM_Example.ipynb`. 
 
 If you're going to train an LSTM model using [Google Colab](https://colab.research.google.com/) (recommended), make sure 
 you utilize their GPU Runtime Type. You will need to adjust the path to `data/` depending on how files are uploaded in
